@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive NFT gallery on the Solana network. Explore and filter collections of blockchain-based digital art.">
+    <meta name="keywords" content="NFTs, Solana, blockchain, digital art, gallery, cryptocurrency">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://alanfonseca.com/">
+    <title>Solana Retro NFTs</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@400;700&display=swap">
+</head>
+
+<body>
+    <div class="config-button" id="configButton">
+        <span class="config-button-icon"><i class="fas fa-cog"></i></span>
+    </div>
+    <div class="control-panel" id="controlPanel" style="display: none;">
+        <span class="reset-button" id="resetButton" title="Reset"><i class="fas fa-sync-alt"></i></span>
+        <div class="separator"></div>
+    </div>
+    <main class="nft-gallery" id="nftGallery"></main>
+
+    <div class="share-icons">
+        <a href="#" id="shareX" title="Share on X.com"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+    <div id="walletModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Enter the wallet you want to view</h2>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="walletInput" placeholder="Enter your wallet address">
+                <div class="error-text" id="errorText">Invalid wallet address. Please try again.</div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveWalletButton">Visualize</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

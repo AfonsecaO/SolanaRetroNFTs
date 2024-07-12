@@ -1,0 +1,228 @@
+/* Same CSS as before but minified */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative
+}
+
+.nft-gallery {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.nft-item {
+    background: #f8f8f8;
+    padding: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    width: auto;
+    max-width: 200px;
+    position: absolute;
+    transform-origin: center;
+    user-select: none;
+    z-index: 1;
+    transition: box-shadow .3s ease, transform .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333
+}
+
+.nft-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    border-radius: 10px 10px 0 0
+}
+
+.nft-item .caption {
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
+    color: #333
+}
+
+@media (max-width:600px) {
+    .nft-item {
+        width: 45%
+    }
+}
+
+.control-panel {
+    background: #f8f8f8;
+    padding: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    width: auto;
+    max-width: 200px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 1000;
+    font-family: 'Patrick Hand', cursive;
+    display: none
+}
+
+.control-panel label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Patrick Hand', cursive;
+    color: #333
+}
+
+.control-panel .separator {
+    border-top: 1px solid #ddd;
+    margin: 10px 0
+}
+
+.config-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1001
+}
+
+.config-button-icon {
+    font-size: 24px;
+    color: #ddd
+}
+
+.reset-button {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 10px
+}
+
+.share-icons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1001
+}
+
+.share-icons a {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #ddd;
+    text-decoration: none
+}
+
+.floating-header {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, .7);
+    padding: 5px 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    font-family: 'Patrick Hand', cursive;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+    font-size: 1em;
+    text-align: center
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .4);
+    justify-content: center;
+    align-items: center
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000
+}
+
+.modal-body {
+    margin-top: 10px
+}
+
+.modal-body input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box
+}
+
+.modal-body input.error {
+    border-color: red
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px
+}
+
+.modal-footer button:hover {
+    background-color: #218838
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    display: none
+}
+
+.error-text {
+    color: red;
+    font-size: .9em;
+    text-align: center;
+    display: none
+}
