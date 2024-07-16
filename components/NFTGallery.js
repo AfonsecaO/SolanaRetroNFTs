@@ -8,7 +8,7 @@ let collections = new Set();
 
 async function fetchNFTs(wallet) {
     try {
-        const response = await fetch(`/api/proxy.php?wallet=${wallet}`);
+        const response = await fetch(`proxy.php?wallet=${wallet}`);
         const result = await response.json();
         if (!response.ok || result.errors) {
             handleInvalidWallet();

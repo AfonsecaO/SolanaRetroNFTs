@@ -6,13 +6,6 @@ export default defineConfig({
     outDir: 'dist',
   },
   server: {
-    open: true,
-    proxy: {
-      '/api': {
-        target: 'https://alanfonseca.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
+    open: true
   },
 });
